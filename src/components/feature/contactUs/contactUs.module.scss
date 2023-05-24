@@ -1,0 +1,114 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.contactBodySec{
+  @include full-width;
+  padding: 100px 0; 
+  @media (max-width: 991px) {
+    padding: 50px 0; 
+  }
+  .contactBodyRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+  .contactPageLeftFormPrt{
+    width: 59%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    h2.contactFormHdn{
+      font-size: 25px;
+      color: #333333;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+  }
+  .contactPageRightInfoPrt{
+    width: 38%;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  .contactInfoBg{
+    position: relative;
+    margin: 61px 0 25px 0;
+    background: url(../../../../public/assets/images/contact-page-info-bg-img.jpg) no-repeat 0 0;
+    width: 100%;
+    border-radius: 8px;
+    background-size: cover;
+    overflow: hidden;
+    @media (max-width: 991px) {
+      margin-top: 0;
+    }
+    .contactInfoTextArea{
+      position: relative;
+      width: 55%;
+      background-color: rgba(18, 18, 18, 0.9);
+      padding: 50px 30px;
+      @media (max-width: 576px) {
+        width: 60%;
+      }
+      @media (max-width: 479px) {
+        width: 80%;
+      }
+      h3{
+        font-size: 25px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+      p{
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 26px;
+        margin-top: 15px;
+        img.callIcon{
+          position: relative;
+          margin-right: 12px;
+          top: 3px;
+        }
+      }
+    }
+  }
+  .scheduleCallRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 479px) {
+      flex-direction: column;
+    }
+    .scheduleCallBtn{
+      .orengeBtnNoGlow{
+        position: relative;
+        padding: 17px 33px;
+        top: -7px;
+      }
+      img.scheduleCallIcon{
+        position: relative;
+        margin-right: 10px;
+        top: 9px;
+        max-width: 30px;
+      }
+    }
+    .scheduleCallImg{
+      max-width: 220px;
+      @media (max-width: 479px) {
+        width: 100%;
+        max-width: 200px;
+        margin: 25px auto 0 auto;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}

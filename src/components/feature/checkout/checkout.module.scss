@@ -1,0 +1,234 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.checkoutBsec{
+  @include full-width;
+  margin: 50px 0; 
+  @media (max-width: 960px) {
+    margin: 50px 0 220px; 
+  }    
+  .ckeckFlex{
+    @include flex-space-between;
+    .checkLeftCol{
+      width: 55%;
+      @media (max-width: 960px) {
+        width: 100%; 
+      }
+      h3{
+        font-size: 1.6rem;
+        color: $lightgrey;
+        font-weight: 700;          
+      }
+      ul{
+        @include ul;
+        display: flex;
+        margin-top: 35px;
+        position: relative;
+        &:after{
+          content: "";
+          border-bottom: solid 2px #dfdfdf;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+        li{
+          .active{
+            color: $orengecolor;
+            border-bottom: solid 2px $orengecolor;
+            position: relative;
+            z-index: 2;            
+          }
+          a{
+            font-size: 1.3rem;
+            color: #5c5c5c;
+            padding: 0 50px 20px;
+            display: block;
+            font-weight: 700;
+            border-bottom: solid 2px $defaultcolor;
+            cursor: pointer;
+            @media (max-width: 1200px) {
+              font-size: 1rem;    
+              padding: 0 18px 20px; 
+            }
+            &:hover{
+              color: $orengecolor;
+              border-bottom: solid 2px $orengecolor;
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+    .checkRightCol{
+      width: 37%;
+      @media (max-width: 960px) {
+        width: 100%; 
+      }
+      .confirmedSec{               
+        background: $defaultcolor;
+        border-radius: 30px;
+        box-shadow: 0 0 20px $greybg;
+        padding: 45px;
+        text-align: left;          
+      .orderSec{
+        @include full-width;
+        margin-top: 0;
+        h2{
+          font-size: 1.6rem;
+          color: $blackcolor;
+          font-weight: 800;
+          border-bottom: solid 1px $thinlightgrey;
+          padding-bottom: 25px;
+        }
+      }
+      .planSec{
+        text-align: left;
+        margin-top: 30px;
+        .flxplan{
+          @include flex-space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          p{
+            margin-bottom: 0;
+          }
+          a{
+            font-size: 0.8rem;
+            color: $iconbg;
+            &:hover{
+              text-decoration: none;
+              color: $orengecolor;
+            }
+          }
+        }
+        h2{
+          font-size: 1.8rem;
+          color: $lightgrey;
+          font-weight: 800;
+        }
+        p{
+          font-size: 1rem;
+          color: $iconbg;
+          font-weight: 500;
+          margin-bottom: 25px;
+        }
+        .flexRow{
+          @include flex-space-between;
+          margin: 10px 0;
+          p{
+            margin: 2px 0;
+            font-size: 1rem;
+          }
+          h3{
+            font-size: 1.3rem;
+            color: $lightgrey;
+            font-weight: 800;
+            padding-top: 15px;
+            span{
+              font-size: 0.9rem;
+              color: $iconbg;
+              font-style: italic;
+              display: block;
+              padding-top: 7px;
+            }
+          }    
+        }
+        .couponBtn{
+          border: solid 1px $orengecolor;
+          border-radius: 30px;
+          padding: 5px 13px;
+          text-decoration: none;
+          margin-top: 10px;
+          display: inline-block;
+          color: $orengecolor;
+          font-size: 0.8rem;
+          font-weight: 600;
+          &:hover{
+            background: $orengecolor;
+            color: $defaultcolor;
+          }
+        }
+        .logoImg{
+          width: 50%;
+          margin: 20px auto 0;
+          img{
+            width: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+      }
+
+    }
+  }
+
+
+  .contentSec{
+    margin-top: 30px;
+    .flxRow{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 30px;
+      label{
+        font-size: 1rem;
+        color: $blackcolor;
+        font-weight: 600;
+        span{
+          color: $iconbg;
+          font-size: 0.9rem;
+        }          
+      }
+      .termText{
+        font-size: 0.9rem;
+        color: $lightgrey;
+        a{
+          font-size: 0.9rem;
+          color: $lightgrey;
+          text-decoration: underline;
+          &:hover{
+            color: $orengecolor;
+          }
+        }
+      }
+      .formControl{          
+        border: solid 1px #cccccc;
+        padding: 13px 20px;
+        border-radius: 30px;
+        margin-top: 10px;
+        font-size: 1rem;
+        &:focus{
+          outline: none;
+        }
+      }
+      
+      .cardImg{
+        position: absolute;
+        top: 45px;
+        right: 20px;
+      }
+    }
+    .flxRow1{
+      @include flex-space-between;
+      position: relative;  
+      flex-direction: inherit; 
+      .flxCol1{
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      .cardImg{
+        top: 43px;
+      }
+      }            
+    }
+    .flxRow2{
+      display: flex;
+      position: relative;  
+      flex-direction: inherit;                   
+    }
+  }
+
+
+}
+

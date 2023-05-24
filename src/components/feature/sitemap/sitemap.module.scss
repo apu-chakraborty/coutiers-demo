@@ -1,0 +1,107 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.sitemapBsec{
+  @include full-width;
+  margin: 80px 0 50px;
+  @media (max-width: 768px) {
+    margin: 80px 0 170px; 
+  }
+  .sitemapFlex{
+    @include flex-space-between;
+    justify-content: flex-start;
+    @media (max-width: 400px) {
+      justify-content: center;          
+    }      
+    .flexCol{
+      width: 16%;
+      margin-right: 8px;
+      margin-bottom: 70px;
+      @media (max-width: 1300px) {
+        width: 30%;          
+      }        
+      @media (max-width: 768px) {
+        width: 50%;
+        margin-right: 0;
+      }
+      @media (max-width: 400px) {
+        width: 100%;          
+      }
+      h3{
+        font-size: 1.3rem;
+        color: $blackcolor;
+        position: relative;
+        padding-left: 20px;
+        padding-bottom: 7px;
+        &:after{
+          content: "";
+          width: 9px;
+          height: 9px;
+          border-radius: 100%;
+          background: #9f9f9f;
+          position: absolute;
+          top: 9px;
+          left: 0;
+        }          
+      }
+      ul{
+        @include ul;
+        li{
+          position: relative;
+          font-weight: 600;
+          a{
+            color: $blackcolor;
+            text-decoration: none;
+            padding: 10px 0 10px 45px;
+            display: block;
+            &:hover{
+              color: $orengecolor;
+            }
+          }
+          &:before{
+            content: "";
+            width: 1px;            
+            background: #9f9f9f;
+            position: absolute;
+            top: -15px;
+            left: 4px;
+            height:41px;
+          }
+          &:after{
+            content: "";
+            width: 23px;
+            height: 1px;            
+            background: #9f9f9f;
+            position: absolute;
+            top: 21px;
+            left: 9px;             
+          }
+          span{
+            border: solid 1px #9f9f9f;
+            background: $defaultcolor;
+            border-radius: 100%;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            left: 0;
+            top: 17px;
+          }
+          ul{
+            position: relative;
+            // margin-left: -45px;
+            li{
+              position: relative; 
+              font-weight: 700;
+              a{
+                padding-left: 60px;
+              }                
+              &:after{
+                content: "";
+                width: 37px;                
+              }                
+            }
+          }
+        }
+      }
+    } 
+  }
+}

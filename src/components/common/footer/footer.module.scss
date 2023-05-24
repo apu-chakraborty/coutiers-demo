@@ -1,0 +1,234 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.footer{
+    background: $maingrey;
+    @include full-width;
+    padding-top: 50px;
+    position: relative;    
+    .topScroll{        
+        position: absolute;
+        bottom: 250px;
+        right: 50px;
+        @media (max-width: 1920px) {
+            bottom: 360px;
+            right: 20px;
+          } 
+          @media (max-width: 1500px) {
+            bottom: 150px;
+          }
+          @media (max-width: 768px) {
+            display: none;
+          }         
+        a{
+            background: #acabab;
+            border-radius: 10px;
+            width: 47px;
+            height: 48px;           
+            @include align-center;
+            justify-content: center;
+            &:hover{
+                background: $orengecolor;
+            }
+        }
+    }
+    .footerCopySec{
+        background: $greybg;
+        padding: 10px 0;
+        text-align: center;
+        color: $lightgrey;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .footerBotSec{
+        background: #e8e8e8;
+        padding:10px 20px;
+        border-radius: 20px;
+        width: 40%;
+        margin: 30px auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        @media (max-width: 768px) {
+            width: auto;
+          }
+    }
+    .footerFlex{
+        @include flex-space-between;
+        h3{
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            padding-bottom: 30px;
+        }
+        .footerCol1{
+            width: 12%;
+            @media (max-width: 1920px) {
+                width: 10%;
+              } 
+              @media (max-width: 1500px) {
+                width: 12%;
+              }
+              @media (max-width: 1050px) {
+                width: 23%;
+              }
+              @media (max-width: 768px) {
+                width: 50%;
+              }
+              @media (max-width: 560px) {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+              }
+            ul{
+                @include ul;
+                display: flex;
+                margin-top: 20px;
+                @media (max-width: 560px) {
+                    justify-content: center;
+                  }
+                li{
+                    margin-right: 10px;
+                    a{
+                      display: flex;
+                      background: $iconbgcolor;
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 100%;
+                      justify-content: center;
+                      align-items: center;
+                      text-decoration: none;
+                      color: $defaultcolor;
+                      &:hover{
+                        background: $orengecolor;
+                      }
+                    }
+                }
+            }
+        }
+
+        .footerCol2{
+            width: 12%; 
+            @media (max-width: 1050px) {
+              width: 23%;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+              }
+                         
+            .callText{
+               display: flex;
+               align-items: center;
+               svg{
+                margin-right: 5px;
+                width: 20px;
+                color: $greybtn;
+               } 
+            }
+            p{
+                font-size: 1rem;
+                color: $lightgrey;                
+                padding-bottom: 15px;               
+                span{
+                    font-size: 0.9rem;
+                    color: $greybtn;
+                    padding-bottom: 5px;
+                    display: block;                   
+                }
+            }
+            ul{
+                @include ul;
+                display: flex;
+                margin-top: 20px;
+                li{
+                    margin-right: 10px;
+                    a{
+                      display: flex;
+                      background: $iconbgcolor;
+                      width: 30px;
+                      height: 30px;
+                      border-radius: 100%;
+                      justify-content: center;
+                      align-items: center;
+                      text-decoration: none;
+                      color: $defaultcolor;
+                      &:hover{
+                        background: $orengecolor;
+                      }
+                    }
+                }
+            }
+        }
+
+        .footerCol3{
+            width: 15%; 
+            @media (max-width: 1050px) {
+              width: 23%;
+            }
+            @media (max-width: 768px) {
+                width: 50%;
+              }       
+            ul{
+                @include ul; 
+                li{
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    a{
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      text-decoration: none;
+                      color: $lightgrey;
+                      &:hover{
+                        color: $orengecolor;
+                      }
+                    }
+                }
+            }
+        }
+        .footerCol4{
+            width: 10%; 
+            @media (max-width: 1050px) {
+              width: 23%;
+            } 
+            @media (max-width: 768px) {
+                width: 45%;
+              }          
+            ul{
+                @include ul; 
+                li{
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    a{
+                      font-size: 0.9rem;
+                      font-weight: 600;
+                      text-decoration: none;
+                      color: $lightgrey;
+                      &:hover{
+                        color: $orengecolor;
+                      }
+                    }
+                }
+            }
+        }
+        .footerCol5{
+            width: 20%; 
+            @media (max-width: 1920px) {
+                width: 23%;
+              } 
+              @media (max-width: 1500px) {
+                width: 15%;
+              }
+              @media (max-width: 1050px) {
+                width: 50%;
+              }
+              @media (max-width: 768px) {
+                width: 50%;
+              }
+              @media (max-width: 560px) {
+                width: 100%;
+                text-align: center;                
+              }
+        }
+
+        
+    }
+}

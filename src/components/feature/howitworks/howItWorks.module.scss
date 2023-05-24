@@ -1,0 +1,263 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.howItWrkBsec{
+  @include full-width;
+  margin: 50px 0; 
+  @media (max-width: 960px) {
+    margin: 50px 0 220px; 
+  }
+  .howItWrkTabPrt{
+    position: relative;
+    width: 100%;
+    .hdn{
+      text-align: center;
+      margin-bottom: 90px;
+      h2{
+        font-size: 1.6rem;
+        color: $blackcolor;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+        @media (max-width: 576px) {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+      }
+      p{
+        font-size: 16px;
+        color: $blackcolor;
+        font-weight: normal;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+    ul.tabMenu{
+      @include ul;
+      display: flex;
+      margin-top: 35px;
+      position: relative;
+      justify-content: center;
+      margin-bottom: 50px;
+      &:after{
+        content: "";
+        border-bottom: solid 2px #dfdfdf;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+      }
+      li{
+        .active{
+          color: $orengecolor;
+          border-bottom: solid 2px $orengecolor;
+          position: relative;
+          z-index: 2;            
+        }
+        a{
+          font-size: 1.3rem;
+          color: #5c5c5c;
+          padding: 0 50px 20px;
+          display: block;
+          font-weight: 700;
+          border-bottom: solid 2px $defaultcolor;
+          cursor: pointer;
+          @media (max-width: 1200px) {
+            font-size: 1rem;    
+            padding: 0 18px 20px; 
+          }
+          @media (max-width: 576px) {
+            font-size: 15px;    
+            padding: 0 12px 10px 0; 
+          }
+          &:hover{
+            color: $orengecolor;
+            border-bottom: solid 2px $orengecolor;
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabContentContainer{
+  position: relative;
+  width: 100%;
+  max-width: 1371px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.generalUserStepSec{
+  margin-top: 100px;
+  @media (max-width: 1250px) {
+    margin-top: 50px;
+  }
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    @media (max-width: 1250px) {
+      justify-content: space-between;
+    }
+    li{
+      width: 300px;
+      margin-left: 150px;
+      position: relative;
+      @media (max-width: 1250px) {
+        width: 31%;
+        margin-left: 0;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+      &:first-child{
+        margin-left: 0;
+        @media (max-width: 767px) {
+          margin-left: auto;
+        }
+      }
+      &:last-child::after{
+        display: none;
+      }
+      &:nth-child(odd)::after{
+        position: absolute;
+        content: '';
+        width: 350px;
+        height: 91px;
+        background: url(../../../../public/assets/images/general-user-step-arrow-1.png) no-repeat 0 0;
+        top: -55px;
+        left: 0;
+        margin: 0 0 0 195px;
+        @media (max-width: 1250px) {
+          display: none;
+        }
+      }
+      &:nth-child(even)::after{
+        position: absolute;
+        content: '';
+        width: 350px;
+        height: 91px;
+        background: url(../../../../public/assets/images/general-user-step-arrow-2.png) no-repeat 0 0;
+        top: 55px;
+        left: 0;
+        margin: 0 0 0 195px;
+        @media (max-width: 1250px) {
+          display: none;
+        }
+      }
+      .stepIcon{
+        position: relative;
+        background-color: #ffffff;
+        width: 130px;
+        height: 130px;
+        text-align: center;
+        border-radius: 100%;
+        padding-top: 35px;
+        margin: 0 auto;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.13);
+        z-index: 3;
+      }
+      h3{
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold;
+        text-align: center;
+        max-width: 350px;
+        min-height: 50px;
+        margin: 15px 0;
+        @media (max-width: 1250px) {
+          max-width: 100%;
+          br{
+            display: none;
+          }
+        }
+        @media (max-width: 767px) {
+          min-height: inherit;
+        }
+      }
+      p{
+        font-size: 17px;
+        color: #333333;
+        font-weight: normal;
+        text-align: center;
+        line-height: 30px;
+        max-width: 300px;
+        @media (max-width: 1250px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.generalUserBodyBannerSec{
+  position: relative;
+  padding: 50px 0;
+  .generalUserBodyBannerImg{
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+  p{
+    font-size: 17px;
+    color: #333333;
+    font-weight: normal;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+
+.generalUserThreeClmSec{
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 75px 0;
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
+  .generalUserThreeClmRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .generalUserThreeClmItem{
+    width: 28%;
+    text-align: center;
+    @media (max-width: 991px) {
+      width: 31%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    .generalUserThreeClmIcon{
+      width: 86px;
+      height: 86px;
+      background-color: #ffffff;
+      border-radius: 100%;
+      line-height: 100px;
+      margin: 0 auto;
+    }
+    h3{
+      font-size: 18px;
+      color: #333333;
+      font-weight: bold;
+      margin: 20px 0 25px 0;
+    }
+    p{
+      font-size: 16px;
+      color: #333333;
+      line-height: 30px;
+    }
+  }
+}

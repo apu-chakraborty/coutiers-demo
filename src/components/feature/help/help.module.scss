@@ -1,0 +1,239 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.commonBsec{
+  @include full-width;
+  margin: 50px 0; 
+  @media (max-width: 1050px) {
+    margin: 50px 0 220px; 
+  }
+  .titleSec{
+    @include flex-space-between;
+    margin: 15px 0 35px;
+    
+    h3{
+      font-size: 1.6rem;
+      color: $lightgrey;
+      font-weight: 700;
+      span{
+        color: $orengecolor;
+      }
+      .greyText{
+        color: $iconbg;
+      }
+    }
+    .searchSect{
+      @include flex-space-between;        
+      @media (max-width: 1050px) {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .searchCol{
+        position: relative;
+        margin-right: 10px;
+        border: solid 1px $thinlightgrey;
+        border-radius: 5px;
+        background: transparent;
+        transition: width 0.4s ease; 
+        transition: background 0.3s, color 0.3s;
+        transform: skew(14deg); /* SKEW */
+        @media (max-width: 768px) {
+          margin-right: 0;
+          transform: skew(0); /* SKEW */
+          width: 100%;
+          margin-bottom: 10px;
+        } 
+        &:after{
+          content: "\f002";
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          position: absolute;
+          top: 12px;
+          right: 15px;
+          color: #666666;
+          font-size: 0.9rem;
+          cursor: pointer;
+          transform: skew(-14deg); /* SKEW */
+          @media (max-width: 768px) {              
+            transform: skew(0); /* SKEW */             
+          } 
+      }
+      input[type=text]{
+          position: relative;
+          padding:10px 0;
+          width: 300px;            
+          color: $iconbg;                                
+          font-size: 0.9rem;
+          font-weight: 600;                             
+          border: none;
+          margin:0 15px;
+          transform: skew(-14deg); /* SKEW */          
+          @media (max-width: 1050px) {
+            background: $defaultcolor;            
+          } 
+          @media (max-width: 768px) {              
+            transform: skew(0); /* SKEW */             
+          }                           
+          &:focus{                            
+              text-indent: 0; 
+              outline: none; 
+          }
+        }
+      }
+      .selectCol{
+        position: relative;          
+        border: solid 1px $thinlightgrey;
+        border-radius: 5px;
+        background: transparent;
+        transition: width 0.4s ease; 
+        transition: background 0.3s, color 0.3s;
+        transform: skew(14deg); /* SKEW */ 
+        @media (max-width: 768px) {              
+          transform: skew(0); /* SKEW */ 
+          width: 100%;            
+        }
+        select{
+          position: relative;
+          padding:10px 0;
+          width: 150px;            
+          color: $iconbg;                                
+          font-size: 0.9rem;
+          font-weight: 600;                             
+          border: none;
+          margin:0 10px;
+          transform: skew(-14deg); /* SKEW */          
+          @media (max-width: 1050px) {
+            background: $defaultcolor;            
+          } 
+          @media (max-width: 768px) {
+            background: $defaultcolor;
+            transform: skew(0); /* SKEW */ 
+            width: 94%;             
+          }                           
+          &:focus{                            
+              text-indent: 0; 
+              outline: none; 
+          }
+        }
+      }
+    }
+  }
+  .helpsecBox{
+    @include flex-space-between;
+    margin-bottom: 20px;
+    .helpNumber{
+      width: 8%;
+      font-size: 1.3rem;
+      color: $iconbg;
+      text-align: center;
+      padding-top: 35px;
+      font-weight: 300;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 10px; 
+        font-size: 2rem;
+        color: #bababa; 
+        padding-top: 0;         
+      }
+    }
+    .helpsecCon{
+      width: 86%;
+      padding: 35px;
+      border: solid 1px $thinlightgrey;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      @media (max-width: 1300px) {
+        width: 85%;                   
+      }
+      @media (max-width: 1050px) {
+        width: 83%;                   
+      }
+      @media (max-width: 960px) {
+        width: 80%;                   
+      }
+      @media (max-width: 768px) {
+        width: auto;
+        margin-bottom: 20px;           
+      }
+      .subText{
+        font-size: 1rem;
+        color: $iconbg;
+      }
+      h2{
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $blackcolor;
+        padding: 0 0 15px;
+      }
+      p{
+        font-size: 1rem;
+        color: $blackcolor;
+        line-height: 1.9;
+        font-weight: 600;
+      }
+      dt{
+        font-size: 0.9rem;
+        color: $lightgrey;
+        padding: 25px 0 0;
+        font-weight: 400;
+      }
+    }
+  }
+  .pagignationSec{
+    @include flex-all-center;
+    margin: 50px 0 100px;
+    ul{
+      @include ul;
+      @include flex-center;
+      li{
+        margin: 0 7px;
+        .roundArrow{
+          border: solid 0.1em #999;
+          border-radius: 100%;
+          width: 33px;
+          height: 33px;
+          svg{
+            width: 16px;
+            color: #999;
+          }
+          &:hover{
+            border: solid 1px $orengecolor;
+            color: #fff;
+            svg{
+              color: #fff;
+            }
+          }
+        }
+        a{
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: $blackcolor;
+          width: 33px;
+          height: 33px;
+          @include flex-center;
+          align-items: center;
+          text-decoration: none;
+          line-height: 33px;
+          &:hover{
+            background: $orengecolor;
+            border-radius: 100%;
+            color: $defaultcolor;
+          }
+        }
+        &:nth-child(5){
+          a{
+            &:hover{
+              background: none;
+              color: $blackcolor;
+            }
+          }
+        }
+        .active{
+          background: $orengecolor;
+          border-radius: 100%;
+          color: $defaultcolor;
+        }
+      }
+    }
+  }
+}

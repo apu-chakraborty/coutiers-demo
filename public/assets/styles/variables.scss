@@ -1,0 +1,31 @@
+@import "./palette.scss";
+
+$blackcolor:palette('primary', 50);
+$defaultcolor:palette('primary', 100);
+$defaultBlue:palette('primary', 200);
+$lightgrey:palette('primary', 300);
+$greybg:palette('primary', 400);
+$descriptionText:palette('primary', 500);
+$skybg:palette('primary', 600);
+$maingrey:palette('primary', 700);
+$text:palette('primary', 800);
+$skyblue:palette('primary', 900);
+$orengecolor:palette('primary', 1000);
+$iconbgcolor:palette('primary', 1100);
+$softlightgrey:palette('primary', 1200);
+$thinlightgrey:palette('primary', 1300);
+
+$defaultheadingcolor:palette('secondary', 50);
+$defaultheadingbluecolor:palette('secondary', 100);
+$defaultbuttonblue:palette('secondary', 200);
+$normalbluecolor:palette('secondary', 300);
+$buttonbluecolor:palette('secondary', 400);
+$iconbg:palette('secondary', 500);
+$softskybg:palette('secondary', 600);
+$green:palette('secondary', 700);
+$red:palette('secondary', 800);
+$greenbg:palette('secondary', 900);
+$greybtn:palette('secondary', 1000);
+$yellowcolor:palette('secondary', 1100);
+$lightblack:palette('secondary', 1200);
+$lightpink:palette('secondary', 1300);

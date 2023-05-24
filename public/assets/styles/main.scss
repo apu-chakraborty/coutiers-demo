@@ -1,0 +1,735 @@
+@import "./fonts";
+@import "./variables";
+@import "./mixins";
+
+
+
+
+.img {
+  @include img;
+}
+.mlauto {
+  margin-left: auto !important;
+}
+.mrauto {
+  margin-right: auto !important;
+}
+.margin10 {
+  margin-top: 10px;
+}
+.margin20 {
+  margin-top: 20px !important;
+}
+.margin30 {
+  margin-top: 30px !important;
+}
+.margin40 {
+  margin-top: 40px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.margin50 {
+  margin-top: 50px !important;
+}
+.marginLeft10 {
+  margin-left: 10px;
+}
+.mtm30 {
+  margin-top: -30px !important;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 576px) {
+    max-width: 540px;
+    width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+    width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+    width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    width: 1140px;
+  }
+}
+
+
+
+
+
+.containerfluid {
+  width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (max-width: 1920px) {
+    width: 90%;
+  } 
+  @media (max-width: 1500px) {
+    width: 95%;
+  }
+   @media (max-width: 768px) {
+    width: auto;
+  }
+}
+
+.containerShort{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.ul {
+  @include ul;
+}
+.cdark {
+  color: $blackcolor !important;
+}
+.cwhite {
+  color: $defaultcolor !important;
+}
+.btn {
+  border: none;
+  outline: none;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+}
+.btn:hover {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.btn:disabled {
+  pointer-events: none;
+  background: #fff;
+  color: #000;
+  border: solid 1px $greybg;
+}
+
+.orangeBtn{
+  position: relative;  
+  color: $defaultcolor;
+  padding: 9px 0; 
+  border-radius: 7px;
+  text-decoration: none;
+  background: url(../images/button-glow.png) $orengecolor;
+  background-position: 115px -38px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  transform: skew(10deg); /* SKEW */ 
+  font-size: 0.9rem;
+  @media (max-width: 1800px) { 
+    width: 160px; 
+  }
+  @media (max-width: 1700px) { 
+    width: 140px; 
+  }
+  @media (max-width: 1500px) { 
+    width: 175px; 
+  }
+  @media (max-width: 360px) { 
+    width: 150px; 
+  }
+  span{
+    display: inline-block; /* block or inline-block is needed */
+    transform: skew(-10deg); /* SKEW */ 
+  } 
+&:hover{
+  background-color: $greenbg; 
+}
+}
+
+
+.greenBtn{
+  position: relative;  
+  color: $defaultcolor; 
+  padding: 9px 0; 
+  border-radius: 7px;
+  text-decoration: none;
+  background: url(../images/button-glow.png) $greenbg;
+  background-position: 115px -38px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  transform: skew(10deg); /* SKEW */ 
+  font-size: 0.9rem;
+  @media (max-width: 1800px) { 
+    width: 160px; 
+  }
+  @media (max-width: 1700px) { 
+    width: 150px; 
+  }
+  @media (max-width: 1500px) { 
+    width: 175px; 
+  }
+  span{
+    display: flex; /* block or inline-block is needed */
+    transform: skew(-10deg); /* SKEW */ 
+    align-items: center;
+    justify-content: center;
+    img{
+      margin-left:7px;      
+    }
+  } 
+&:hover{
+  background-color: $orengecolor;  
+}
+}
+
+.brownBtn{
+  position: relative;  
+  color: $defaultcolor; 
+  padding: 9px 0; 
+  border-radius: 7px;
+  text-decoration: none;
+  background: url(../images/button-glow.png) $defaultheadingcolor;
+  background-position: 115px -38px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 175px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  transform: skew(10deg); /* SKEW */ 
+  font-size: 0.9rem;
+  @media (max-width: 1800px) { 
+    width: 160px; 
+  }
+  @media (max-width: 1700px) { 
+    width: 150px; 
+  }
+  @media (max-width: 1500px) { 
+    width: 175px; 
+  }
+  span{
+    display: flex; /* block or inline-block is needed */
+    transform: skew(-10deg); /* SKEW */ 
+    align-items: center;
+    justify-content: center;
+    img{
+      margin-left:7px;      
+    }
+  } 
+&:hover{
+  background-color: $orengecolor;  
+}
+}
+
+
+.orengeBtnNoGlow{
+  background: $orengecolor;
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: $defaultcolor;
+  font-size: 1rem;
+  border: none;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    background: $greenbg;
+  }
+}
+
+
+.paymentBtn{
+  background: url(../images/button-glow.png) $orengecolor;
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: $defaultcolor;
+  font-size: 1rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-position: 130% -35px;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  &:hover{
+    background: url(../images/button-glow.png) $greenbg;
+    background-position: 120% -35px;
+    background-repeat: no-repeat;
+  }
+}
+
+.bannerTypeOne{
+  @include full-width;
+  position: relative;  
+  display: flex;
+  height: 440px;
+  @media (max-width: 1300px) {
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    height: auto;
+  } 
+  .innerBannerOne{
+    width: 65%;
+    height: 100%; 
+    margin-left: -2%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    img{      
+      width: 100%;
+      height: 100%; 
+    }
+  }   
+  .breadCrumbTypeOne{
+    display: flex;
+    align-items: center;
+    margin-left: 0px; 
+    margin-top: 145px;   
+    @media (max-width: 1920px) {
+      margin-top: 145px;
+    }
+    @media (max-width: 1300px) {      
+      margin-top: 0;
+    }
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
+    .innerBreadCrumbOne{
+      background: $lightblack;
+      display: inline-block;
+      padding: 35px 35px 35px 40px;
+      transition: background 0.3s, color 0.3s;
+      transform: skew(14deg); /* SKEW */ 
+      border-radius: 15px;
+      @media (max-width: 1920px) {
+        transform: skew(14deg); /* SKEW */ 
+      }
+      @media (max-width: 1720px) {
+        transform: skew(11deg); /* SKEW */ 
+      }
+      @media (max-width: 1300px) {
+        padding: 35px 35px;
+      }
+      h1{
+        font-size: 2rem;
+        color: $defaultcolor;
+        margin-left: -7px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transform: skew(-14deg); /* SKEW */
+        @media (max-width: 1920px) {
+          transform: skew(-14deg); /* SKEW */ 
+        }
+        @media (max-width: 1720px) {
+          transform: skew(-11deg); /* SKEW */
+          font-size: 1.7rem; 
+        } 
+        @media (max-width: 1720px) {
+          transform: skew(-11deg); /* SKEW */
+          font-size: 1.3rem; 
+        }
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+          margin-left: -4px;
+        }
+        @media (max-width: 380px) {
+          font-size: 1rem;
+        }
+      }
+      p{
+        transform: skew(-14deg); /* SKEW */
+        color: $defaultcolor;
+        padding-bottom: 5px;
+        @media (max-width: 1920px) {
+          transform: skew(-14deg); /* SKEW */ 
+        }
+        @media (max-width: 1720px) {
+          transform: skew(-11deg); /* SKEW */ 
+        }
+        a{
+          color: $defaultcolor;
+          text-decoration: none;          
+        } 
+      }
+    }
+  }
+}
+
+
+.fullWidthBanner{
+  position: relative;
+  .bannerImg{
+    width: 100%;
+  }
+  .bannerSocialIcon{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 6;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 5px;
+      margin-top: 30px;
+      li{
+        margin-right: 10px;
+        a{
+          img{
+            width: 26px;
+            height: 26px;
+            border-radius: 100%;
+            filter: brightness(0) invert(1);
+          }
+        }
+        a:hover{
+          img{
+            box-shadow: 0 0 15px rgba(255, 96, 0, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.courtiersDfltForm{
+  .dfltFormRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media (max-width: 576px) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+  .oneClmForm{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .twoClmForm{
+    position: relative;
+    width: 48%;
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .threeClmForm{
+    position: relative;
+    width: 31%;
+    @media (max-width: 576px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  label{
+    font-size: 16px;
+    color: $blackcolor;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+  }
+  input, textarea, select{
+    font-size: 16px;
+    color: $blackcolor;
+    font-weight: normal;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    padding: 10px 20px;
+    outline: none;
+    @include transition;
+    &:hover{
+      border-color: $blackcolor;
+    }
+  }
+  textarea{
+    height: 150px;
+    border-radius: 8px;
+  }
+  select{
+    background-image: url(../images/select-down-arrow2.png);
+    background-repeat: no-repeat;
+    background-position: 97% 54%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .dfltFormField::placeholder{
+    color: $blackcolor;
+    opacity: 1;
+  }
+  .radioCheckRow{
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    .titleHdn{
+      font-size: 14px;
+      color: #666666;
+      font-weight: 600;
+      display: block;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+      li{
+        margin-left: 20px;
+        margin-bottom: 15px;
+        @media (max-width: 576px) {
+          width: 100%;
+          margin-left: 0;
+        }
+        &:first-child{
+          margin-left: 0;
+        }
+        input[type=checkbox]{
+          display: none;
+        }
+        input[type=checkbox]+label{
+          position: relative;
+          cursor: pointer;
+          padding-left: 35px;
+          top: 5px;
+          font-size: 15px;
+        }
+        input[type=checkbox]+label::after{
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: 25px;
+          top: -2px;
+          left: 0;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        input[type=checkbox]:checked+label::before{
+          position: absolute;
+          content: '';
+          width: 6px;
+          height: 15px;
+          border: solid $orengecolor;
+          border-width: 0 2px 2px 0;
+          transform: rotate(50deg);
+          top: 1px;
+          left: 10px;
+        }
+        
+        input[type=radio]{
+          display: none;
+        }
+        input[type=radio]+label{
+          position: relative;
+          cursor: pointer;
+          padding-left: 35px;
+          top: 5px;
+          font-size: 15px;
+        }
+        input[type=radio]+label::after{
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: 25px;
+          top: -2px;
+          left: 0;
+          border: 1px solid #ccc;
+          border-radius: 100%;
+        }
+        input[type=radio]:checked+label::before{
+          position: absolute;
+          content: '';
+          width: 15px;
+          height: 15px;
+          background-color: $orengecolor;
+          border-radius: 100%;
+          top: 4px;
+          left: 6px;
+        }
+      }
+    }
+  }
+  .flWidthOrngSubmit{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background-color: $orengecolor;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 15px;
+    margin-top: 15px;
+  }
+  .forgotPass{
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    color: $blackcolor;
+    font-weight: 700;
+    text-align: center;
+    a{
+      color: $blackcolor;
+      text-decoration: none;
+      &:hover{
+        color: $orengecolor;
+      }
+    }
+  }
+  .needAccount{
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    color: #666666;
+    font-weight: 700;
+    text-align: center;
+    a{
+      color: $orengecolor;
+      text-decoration: underline;
+      &:hover{
+        color: $blackcolor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+.ReactModalPortal{
+  .ReactModal__Overlay{
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+  }
+}
+.loginRegisterPopup{
+  position: absolute;
+  width: 900px;
+  height: auto;
+  background-color: $defaultcolor;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  overflow: hidden;
+  @media (max-width: 925px) {
+    width: 100%;
+    max-width: 730px;
+  }
+  @media (max-width: 767px) {
+    max-width: 550px;
+  }
+  @media (max-width: 576px) {
+    max-width: 90%;
+    max-height: 90vh;
+  }
+}
+.loginRegisterPopupHeight{
+  max-height: 70vh;
+  padding-right: 30px;
+  @media (max-width: 576px) {
+    max-height: 50vh;
+    padding-right: 12px;
+  }
+}
+
+
+
+.appSec{
+  @include full-width;
+  background: url(../images/app-bg.png);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 290px;
+  margin-top: 50px;
+  @media (max-width: 1050px) {
+    position: relative;
+    margin-top: 150px;
+  }
+  .flexCont{
+    @include flex-space-between;
+    align-items: center;
+    height: 290px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 1920px) {
+      width: 90%;
+    } 
+    @media (max-width: 1500px) {
+      width: 100%;
+    }      
+    @media (max-width: 1050px) {
+      width: 100%;
+      position: absolute;
+      top: -170px;
+      left: 0;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    h3{
+      padding-top: 60px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      color: $defaultcolor;
+      @media (max-width: 1050px) {
+        padding-top: 0;          
+        color: $blackcolor;
+        text-align: center;
+      }
+    }
+    p{ 
+      font-size: 0.9rem;
+      color: $defaultcolor;
+      @media (max-width: 1050px) {           
+        color: $blackcolor; 
+        text-align: center;         
+      }
+    }
+    .appLogo{
+      padding-top: 60px;
+      @media (max-width: 1050px) {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+      }
+      img{
+        @media (max-width: 1050px) {
+          width: 45%;
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'bod72b';
+	src: url('../fonts/bod72b.eot');
+	src: url('../fonts/bod72b.eot') format('embedded-opentype'),
+				url('../fonts/bod72b.woff2') format('woff2'),
+				url('../fonts/bod72b.woff') format('woff'),
+				url('../fonts/bod72b.ttf') format('truetype'),
+				url('../fonts/bod72b.svg#bod72b') format('svg');
+}
+
+@font-face {
+  font-family: 'bell_gothic_stdblack';
+  src: url('../fonts/bellgothicstd-black-webfont.woff2') format('woff2'),
+       url('../fonts/bellgothicstd-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'bell_gothic_stdbold';
+  src: url('../fonts/bellgothicstd-bold-webfont.woff2') format('woff2'),
+       url('../fonts/bellgothicstd-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
