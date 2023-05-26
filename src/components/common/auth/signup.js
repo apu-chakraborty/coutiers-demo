@@ -6,12 +6,7 @@ import { customStyles } from './customStyles'
 import { Formik, Form, ErrorMessage, Field } from 'formik'
 import { initialSignupValues, validationSignupSchema } from '@/schemas/authSchema'
 import CustomInput from './CustomInput'
-import { FormControlLabel, Radio, RadioGroup } from '@mui/material'
-const radioOptions = [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-    // Add more options as needed
-  ];
+
 export default function Signup({ isRegisterModalOpen, registerCloseModal }) {
     return (
         <Modal
@@ -49,7 +44,7 @@ export default function Signup({ isRegisterModalOpen, registerCloseModal }) {
                                         actions.setSubmitting(false);
                                     }, 1000);
                                 }}>
-                                {(values, handleChange, errors) => (
+                                {() => (
                                     <Form>
                                         <div className="courtiersDfltForm">
                                             <div className="dfltFormRow">
@@ -167,25 +162,25 @@ export default function Signup({ isRegisterModalOpen, registerCloseModal }) {
                                                 <ul>
                                                     <li>
                                                         <Field type="radio"
-                                                         name="duration" id="within_item1" value="0-3 months"/>
+                                                            name="duration" id="within_item1" value="0-3 months" />
                                                         <label for="within_item1">0-3 months</label>
                                                     </li>
                                                     <li>
                                                         <Field type="radio"
-                                                         name="duration" id="within_item2"
-                                                         value="4-6 months"
-                                                         />
+                                                            name="duration" id="within_item2"
+                                                            value="4-6 months"
+                                                        />
                                                         <label for="within_item2">4-6 months</label>
                                                     </li>
                                                     <li>
                                                         <Field type="radio"
-                                                         name="duration" id="within_item3"
-                                                         value="7 months or more"
-                                                         
-                                                         />
+                                                            name="duration" id="within_item3"
+                                                            value="7 months or more"
+
+                                                        />
                                                         <label for="within_item3">7 months or more</label>
                                                     </li>
-                                                </ul> 
+                                                </ul>
 
                                                 <ErrorMessage className={styles.errorMsg} name="duration" component="div" />
 
