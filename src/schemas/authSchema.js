@@ -1,4 +1,4 @@
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 
 // sign in
 export const validationLoginSchema = Yup.object({
