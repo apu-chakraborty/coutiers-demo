@@ -40,7 +40,7 @@ export default function Signup({ isRegisterModalOpen, registerCloseModal }) {
                                 validationSchema={validationSignupSchema}
                                 onSubmit={(values, actions) => {
                                     setTimeout(() => {
-                                        console.log(JSON.stringify(values, null, 2));
+                                       alert(JSON.stringify(values, null, 2));
                                         actions.setSubmitting(false);
                                     }, 1000);
                                 }}>

@@ -38,7 +38,7 @@ export const validationSignupSchema = Yup.object({
     street: Yup.string().required("Street is Required").trim(),
     city: Yup.string().required("City is Required").trim(),
     province: Yup.string().required("Province is Required").trim(),
-    postalCode: Yup.string().required("Postal Code is Required").trim(),
+    postalCode: Yup.number().positive().required('Postal Code is Required').min(1).typeError('A number is required'),
     accountType: Yup.string().required("Account Type is Required").trim(),
     goal: Yup.array().of(Yup.string().required('Goal is required')).min(1, 'Select at least one Goal'),
     duration: Yup.string().required("Duration is Required").trim(),
