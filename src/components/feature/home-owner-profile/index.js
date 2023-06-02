@@ -7,8 +7,8 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 const Reviews = dynamic(() => import('@/components/common/reviews'), {
     ssr: false,
 });
-import '../../../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
-import '../../../../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import styles from "./homeOwnerProfile.module.scss";
 
 function HomeOwnerProfileBody() {

@@ -7,7 +7,7 @@ import { Form, Formik } from 'formik';
 import CustomInput from './CustomInput';
 import { validationLoginSchema } from '@/schemas/authSchema';
 
-export default function Signin({ isLoginModalOpen, loginCloseModal }) {
+export default function Signin({ isLoginModalOpen, loginCloseModal, registerOpenModal }) {
   return (
     <Modal
       className="loginRegisterPopup"
@@ -67,7 +67,12 @@ export default function Signin({ isLoginModalOpen, loginCloseModal }) {
                         <p className="forgotPass"><a href="#">Forgot password?</a></p>
                       </div>
                       <div className="oneClmForm">
-                        <p className="needAccount">Need an account? <a href="#">Register today</a></p>
+                        <p className="needAccount">Need an account? 
+                        <a href="#" onClick={() => {
+                          registerOpenModal()
+                          loginCloseModal()
+                        }
+                        }>Register today</a></p>
                       </div>
                     </div>
                   </Form>

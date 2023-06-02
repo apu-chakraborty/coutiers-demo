@@ -7,6 +7,7 @@ import { useState } from "react";
 import styles from "./header.module.scss";
 import Signup from '../auth/signup';
 import Signin from '../auth/signin';
+import Link from 'next/link';
 // import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 // import MarkEmailUnreadOutlinedIcon from '@mui/icons-material/MarkEmailUnreadOutlined';
 function Header() {
@@ -50,10 +51,15 @@ function Header() {
       <Signin
         loginCloseModal={loginCloseModal}
         isLoginModalOpen={isLoginModalOpen}
+        registerCloseModal={registerCloseModal}
+        isRegisterModalOpen={isRegisterModalOpen}
+        registerOpenModal={registerOpenModal}
       ></Signin>
       <Signup
         registerCloseModal={registerCloseModal}
         isRegisterModalOpen={isRegisterModalOpen}
+        loginCloseModal={loginCloseModal}
+        isLoginModalOpen={isLoginModalOpen}
 
       ></Signup>
       <div className={styles.containerfluid}>
@@ -86,8 +92,8 @@ function Header() {
 
 
           </div>
-          <div className={styles.headerMidCol}><a title="COURTIERS PROPRIOS" href="#">
-            <img src={"../../../assets/images/logo.png"} /></a></div>
+          <div className={styles.headerMidCol}><Link title="COURTIERS PROPRIOS" href="/" >
+            <img src={"../../../assets/images/logo.png"} /></Link></div>
           <div className={styles.headerRightCol}>
             <div className={styles.topRow}>
               <ul>
