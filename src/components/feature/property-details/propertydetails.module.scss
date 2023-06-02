@@ -1,0 +1,1708 @@
+@import "../../../../public/assets/styles/shared.scss";
+
+.propertyDtlsHdr{
+  background: url(../../../../public/assets/images/prprty-dtl-hdr-bg.png) repeat-x 0 0;
+  padding-top: 30px;
+  .propertyDtlsHdrRow{
+    @include flex-space-between;
+    align-items: center;
+    @media (max-width: 992px){
+      flex-direction: column;
+      text-align: center;
+    }
+    .propertyDtlsHdrLeftPrt{
+      h2{
+        font-size: 28px;
+        color: #010101;
+        font-weight: bold;
+        @media (max-width: 767px){
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+      }
+      p{
+        font-size: 16px;
+        color: $lightgrey;
+        @media (max-width: 767px){
+          font-size: 14px;
+        }
+      }
+    }
+    .propertyDtlsHdrRightPrt{
+      position: relative;
+      background-color: $defaultcolor;
+      padding: 10px 0 10px 30px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.03);
+      border-radius: 50px 0 0 0;
+      @media (max-width: 767px){
+        padding: 20px 0;
+        width: 100%;
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        width: 999rem;
+        height: 100%;
+        left: 100%;
+        top: 0;
+        background-color: $defaultcolor;
+        box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.03);
+      }
+      ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @media (max-width: 767px){
+          flex-direction: column;
+          align-items: center;
+        }
+        li{
+          margin-left: 40px;
+          &:first-child{
+            margin-left: 0
+          }
+          @media (max-width: 992px){
+            margin-left: 20px;
+          }
+          @media (max-width: 767px){
+            margin: 12px 0;
+          }
+        }
+        .hdrPropertyDtlsQualityPrice{
+          h2{
+            .good{
+              font-size: 16px;
+              color: $defaultcolor;
+              font-weight: bold;
+              display: inline-block;
+              background-color: #4db93a;
+              padding: 2px 6px;
+              border-radius: 4px;
+              @media (max-width: 767px){
+                font-size: 14px;
+              }
+            }
+            .greenUpArrowIcon{
+              vertical-align: middle;
+              margin-left: 10px;
+            }
+            .price{
+              font-size: 35px;
+              color: $lightgrey;
+              font-weight: bold;
+              display: inline-block;
+              position: relative;
+              top: 6px;
+              margin-left: 30px;
+              @media (max-width: 767px){
+                font-size: 26px;
+                margin-left: 20px;
+              }
+            }
+          }
+          p{
+            font-size: 15px;
+            color: #747474;
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            img{
+              vertical-align: middle;
+            }
+            span{
+              color: $blackcolor;
+              margin-left: 3px;
+            }
+            .mutationTax{
+              margin-right: 15px
+            }
+          }
+        }
+        .brokerProfilePrt{
+          display: flex;
+          flex-wrap: wrap;
+          .brokerProfilePic{
+            width: 90px;
+            margin-right: 10px;
+            img{
+              width: 90px;
+              height: 90px;
+              border-radius: 100%;
+              display: inline-block;
+              border: 10px solid $defaultcolor;
+              box-shadow: -3px 2px 10px rgba(0, 0, 0, 0.05);
+            }
+          }
+          .brokerProfileText{
+            h2{
+              font-size: 20px;
+              color: $blackcolor;
+              font-weight: bold;
+            }
+            h3{
+              font-size: 14px;
+              color: $lightgrey;
+              font-weight: normal;
+              margin-top: 2px;
+            }
+            a{
+              font-size: 15px;
+              margin-top: 20px;
+            }
+          }
+        }
+        .emeraldRightPrt{
+          text-align: center;
+          .emeraldImg{
+            margin-bottom: 10px;
+          }
+          .emeraldSocialIcons{
+            a{
+              width: 32px;
+              height: 32px;
+              border: 1px solid #cccccc;
+              border-radius: 100%;
+              text-align: center;
+              line-height: 35px;
+              display: inline-block;
+              margin: 0 5px;
+              img{
+                max-width: 18px;
+                max-height: 18px;
+              }
+              &:hover{
+                background-color: $orengecolor;
+                border-color: transparent;
+                img{
+                  filter: brightness(0) invert(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.propertyDtlsBannerBox{
+  position: relative;
+  background-color: $defaultcolor;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  .propertyDtlsBannerSlide{
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .propertyDtlsBannerBtmInfo{
+    padding: 10px 20px;
+    @include flex-space-between;
+    @media (max-width: 992px){
+      flex-direction: column;
+      align-items: center;
+    }
+    .propertyDtlsBannerBtmLeftPrt{
+      @media (max-width: 992px){
+        margin-bottom: 10px;
+      }
+      ul{
+        @include align-center;
+        @media (max-width: 767px){
+          justify-content: center;
+        }
+        li{
+          margin-left: 40px;
+          font-size: 13px;
+          color: #666666;
+          font-weight: 600;
+          &:first-child{
+            margin-left: 0;
+          }
+          &:last-child{
+            margin-left: 15px;
+          }
+          @media (max-width: 992px){
+            margin-left: 30px;
+          }
+          @media (max-width: 767px){
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+          .bnrGlryArrow{
+            @include align-center;
+            a{
+              margin-left: 15px;
+              &:first-child{
+                margin-left: 0;
+              }
+              img{
+                max-width: 30px;
+                top: 0;
+              }
+            }
+            p{
+              font-size: 17px;
+              color: #666666;
+              font-weight: 600;
+              margin-left: 10px;
+              span{
+                color: $blackcolor;
+              }
+            }
+          }
+          img{
+            vertical-align: middle;
+            max-width: 20px;
+            margin-right: 10px;
+            position: relative;
+            top: -2px;
+          }
+          span{
+            color: $blackcolor;
+          }
+        }
+      }
+    }
+    .propertyDtlsBannerBtmRightPrt{
+      @media (max-width: 479px){
+        width: 100%;
+      }
+      ul{
+        @include align-center;
+        @media (max-width: 479px){
+          flex-direction: column;
+        }
+        li{
+          margin-left: 45px;
+          font-size: 14px;
+          color: #666666;
+          @media (max-width: 479px){
+            width: 100%;
+            margin: 10px 0;
+          }
+          &:last-child{
+            @media (max-width: 479px){
+              text-align: right;
+            }
+          }
+          img{
+            vertical-align: middle;
+          }
+          span{
+            color: $blackcolor;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+          .propertyDtlsBannerBtmRightProfilePic{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            margin-right: 10px;
+            @media (max-width: 479px){
+              display: block;
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.activeBrokersCrslSec{
+  position: relative;
+  padding: 75px 0 10px 0;
+  @media (max-width: 992px){
+    padding-bottom: 15px;
+  }
+  @media (max-width: 767px){
+    padding-top: 40px;
+  }
+  .activeBrokersCrslHdn{
+    @include align-center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @media (max-width: 992px){
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767px){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    h2{
+      font-size: 20px;
+      color: $lightgrey;
+      font-weight: bold;
+      @media (max-width: 767px){
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    .seeAllBrokerLink{
+      width: 270px;
+    }
+  }
+  .activeBrokersCrslBox{
+    @include align-center;
+    background-color: $defaultcolor;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    padding: 15px 10px;
+    border-radius: 6px;
+    @media (max-width: 767px){
+      justify-content: center;
+    }
+    .activeBrokersCrslImg{
+      width: 60px;
+      @media (min-width: 1800px){
+        width: 80px;
+      }
+      @media (max-width: 992px){
+        width: 60px;
+      }
+      img{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        @media (min-width: 1800px){
+          width: 80px;
+          height: 80px;
+        }
+        @media (max-width: 992px){
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+    .activeBrokersCrslText{
+      margin-left: 3px;
+      width: 72%;
+      @media (min-width: 1800px){
+        width: 70%;
+      }
+      @media (max-width: 520px){
+        margin-left: 10px;
+      }
+      h3{
+        font-size: 16px;
+        color: $blackcolor;
+        font-weight: 600;
+      }
+      h4{
+        font-size: 14px;
+        color: $lightgrey;
+        font-weight: 600;
+        margin: 4px 0;
+      }
+      .activeBrokerReview{
+        img{
+          max-width: 80px;
+          vertical-align: middle;
+          margin-right: 8px;
+        }
+        span{
+          font-size: 12px;
+          color: $blackcolor;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+
+
+.prprtyDtlBodySec{
+  position: relative;
+  padding: 20px 0 40px 0;
+  .rightFloatingIcons{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    border: 1px solid #cccccc;
+    border-right: none;
+    border-radius: 6px;
+    padding: 5px 6px;
+    background-color: $defaultcolor;
+    z-index: 3;
+    @media (min-width: 1800px){
+      top: 180px;
+      padding: 5px 8px;
+    }
+    @media (max-width: 992px){
+      top: 110px;
+      right: -15px;
+    }
+    ul{
+      li{
+        margin: 10px 0;
+        a{
+          width: 25px;
+          height: 25px;
+          border: 1px solid #cccccc;
+          border-radius: 100%;
+          text-align: center;
+          line-height: 26px;
+          display: inline-block;
+          @media (min-width: 1800px){
+            width: 30px;
+            height: 30px;
+            line-height: 32px;
+          }
+          &:hover{
+            background-color: $orengecolor;
+            border-color: transparent;
+            img{
+              filter: brightness(0) invert(1);
+            }
+          }
+          img{
+            max-height: 14px;
+            max-width: 14px;
+            @media (min-width: 1800px){
+              max-width: 18px;
+              max-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .prprtyDtlBodyRow{
+    @include flex-space-between;
+    @media (max-width: 992px){
+      flex-direction: column;
+    }
+    .prprtyDtlTabLeftPrt{
+      position: relative;
+      width: 65%;
+      @media (max-width: 992px){
+        width: 100%;
+      }
+      ul.tabMenu{
+        @include ul;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 35px;
+        position: relative;
+        justify-content: flex-start;
+        margin-bottom: 50px;
+        @media (max-width: 576px){
+          justify-content: space-between;
+        }
+        &:after{
+          content: "";
+          border-bottom: solid 2px #dfdfdf;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+        li{
+          margin-left: 5px;
+          @media (max-width: 576px){
+            margin: 10px 5px;
+          }
+          &:first-child{
+            margin-left: 0;
+          }
+          .active{
+            color: $orengecolor;
+            border-bottom: solid 2px $orengecolor;
+            position: relative;
+            z-index: 2;            
+          }
+          a{
+            font-size: 16px;
+            color: #5c5c5c;
+            padding: 0 30px 20px 30px;
+            display: block;
+            font-weight: 700;
+            border-bottom: solid 2px $defaultcolor;
+            cursor: pointer;
+            display: inline-block;
+            @media (min-width: 1800px){
+              font-size: 20px;
+            }
+            @media (max-width: 1200px) {
+              font-size: 1rem;    
+              padding: 0 18px 20px; 
+            }
+            @media (max-width: 767px) {
+              font-size: 15px;    
+              padding: 0 12px 10px 0; 
+            }
+            &:hover{
+              color: $orengecolor;
+              border-bottom: solid 2px $orengecolor;
+              position: relative;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    
+    
+    
+      .tabContentContainer{
+        position: relative;
+        width: 100%;
+        max-width: 1370px;
+        margin: 0 auto;
+        padding: 0 15px;
+        @media (max-width: 767px){
+          padding: 0;
+        }
+      }
+    }
+
+
+
+    .prprtyDtlBodyRightPrt{
+      width: 32%;
+      margin-top: 40px;
+      @media (max-width: 992px){
+        width: 100%;
+        margin: 40px auto 0 auto;
+        position: relative;
+      }
+      @media (max-width: 767px){
+        width: 100%;
+      }
+      .propertyDtlsRightTopInfo{
+        position: relative;
+        background-color: #f9f8f8;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+        @media (max-width: 576px){
+          padding: 20px;
+        }
+        ul{
+          li{
+            font-size: 15px;
+            color: #776059;
+            font-weight: 600;
+            margin: 20px 0;
+            .icon{
+              width: 36px;
+              height: 36px;
+              border: 1px solid #393939;
+              border-radius: 100%;
+              display: inline-block;
+              background-color: $defaultcolor;
+              text-align: center;
+              line-height: 32px;
+              margin-right: 15px;
+            }
+            img{
+              vertical-align: middle;
+            }
+            .showBtn{
+              display: inline-block;
+              font-size: 14px;
+              color: $orengecolor;
+              font-weight: 600;
+              border: 1px solid $orengecolor;
+              border-radius: 50px;
+              padding: 3px 12px;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+
+      .largeBrokersProfileSec{
+        h2{
+          font-size: 20px;
+          color: $blackcolor;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+      }
+
+      .offerFromBrokerSec{
+        position: relative;
+        margin-top: 20px;
+        .getOfferBg{
+          width: 100%;
+          min-height: 160px;
+          border-radius: 18px;
+          object-fit: cover;
+          object-position: top left;
+        }
+        .getOfferContent{
+          position: absolute;
+          bottom: 25px;
+          width: 100%;
+          left: 0;
+          @include flex-space-between;
+          align-items: center;
+          padding: 0 20px;
+          @media (min-width: 1800px){
+            padding: 0 35px;
+            bottom: 35px;
+          }
+          h2{
+            font-size: 25px;
+            color: $defaultcolor;
+            font-weight: bold;
+            line-height: 28px;
+            @media (min-width: 1800px){
+              font-size: 30px;
+              line-height: 32px;
+            }
+            span{
+              font-weight: normal;
+              display: block;
+            }
+          }
+        }
+      }
+
+
+      .smallBrokersProfileSec{
+        position: relative;
+        margin-top: 20px;
+        ul{
+          @include flex-space-between;
+          li.brokersProfileItem{
+            width: 48%;
+            @media (max-width: 576px){
+              width: 100%;
+              margin: 15px 0;
+            }
+            .brokersProfilePic{
+              img{
+                width: 100px;
+                height: 100px;
+              }
+            }
+            .brokersProfileTitle{
+              p{
+                padding: 0 15px;
+                @media (min-width: 1800px){
+                  padding: 0 20px;
+                }
+              }
+            }
+            .shareIconsPrt{
+              ul{
+                li{
+                  margin: 5px 6px;
+                  @media (min-width: 1800px){
+                    margin: 5px 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//********* Broker Profile Item Style
+.brokersProfileItem{
+  position: relative;
+  width: 100%;
+  background-color: $defaultcolor;
+  padding: 60px 10px 10px 10px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  .brokersProfileStatus{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    span{
+      display: inline-block;
+      width: auto;
+      font-size: 11px;
+      color: $defaultcolor;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 3px 6px;
+      border-radius: 4px;
+      &.online{
+        background-color: #5dbf96;
+      }
+    }
+  }
+  .brokersProfilePic{
+    img{
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+    }
+  }
+  .brokersProfileTitle{
+    h3{
+      font-size: 20px;
+      color: $blackcolor;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    h4{
+      font-size: 14px;
+      color: $lightgrey;
+      font-weight: normal;
+      margin: 2px 0 20px 0;
+    }
+    p{
+      position: relative;
+      font-size: 15px;
+      color: $lightgrey;
+      font-weight: normal;
+      font-style: italic;
+      line-height: 22px;
+      padding: 0 20px;
+      @media (min-width: 1800px){
+        padding: 0 60px;
+      }
+      &::before,
+      &::after{
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 13px;
+      }
+      &::before{
+        background: url(../../../../public/assets/images/left-quote-icon2.png) no-repeat 0 0;
+        background-size: contain;
+        margin: 2px 0 0 -22px;
+      }
+      &::after{
+        background: url(../../../../public/assets/images/right-quote-icon2.png) no-repeat 0 0;
+        background-size: contain;
+        margin: 8px 0 0 10px;
+      }
+    }
+  }
+  p{
+    font-size: 14px;
+    color: #858585;
+    line-height: 20px;
+    margin-bottom: 8px;
+    span{
+      color: $blackcolor;
+    }
+    img{
+      vertical-align: middle;
+    }
+    &.language{
+      margin-top: 22px;
+    }
+    &.reviewRating{
+      img{
+        margin: 0 5px;
+        max-width: 80px;
+      }
+    }
+    &.coverCity{
+      margin-top: 10px;
+    }
+  }
+  .contactIcons{
+    margin-top: 10px;
+    ul{
+      @include align-center;
+      justify-content: center !important;
+      li{
+        margin: 5px 8px;
+        a{
+          width: 32px;
+          height: 32px;
+          border: 1px solid #6a6a6a;
+          border-radius: 100%;
+          display: inline-block;
+          background-color: white;
+          text-align: center;
+          line-height: 34px;
+          img{
+            max-width: 18px;
+          }
+        }
+      }
+    }
+  }
+  .lennardPrt{
+    margin-top: 15px;
+    h3{
+      font-family: 'bod72b';
+      font-size: 22px;
+      color: $orengecolor;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+  .socialIcons{
+    margin-top: 10px;
+    ul{
+      @include align-center;
+      justify-content: center !important;
+      li{
+        margin: 5px;
+        a{
+          display: inline-block;
+          img{
+            max-width: 24px;
+          }
+        }
+      }
+    }
+  }
+  .seeFullProfile{
+    margin-top: 10px;
+    img{
+      position: relative;
+      top: 2px;
+      margin-right: 8px;
+    }
+    a{
+      color: $orengecolor;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .shareIconsPrt{
+    margin-top: 25px;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #e6e6e6;
+    ul{
+      @include align-center;
+      justify-content: center !important;
+      li{
+        margin: 5px 18px;
+        a{
+          display: inline-block;
+          img{
+            max-width: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//********* Description Tab Style
+.bottomShadow{
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 21px;
+    background: url(../../../../public/assets/images/broker-details-tab-sec-shadow.png) no-repeat 0 0;
+    background-size: contain;
+    bottom: -21px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+.brokerDetailsDescriptionTab{
+  padding: 0 13px;
+}
+.houseInfo{
+  position: relative;
+  padding: 0 0 10px 0;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      margin-bottom: 50px;
+      margin-right: 60px;
+      font-size: 15px;
+      color: $blackcolor;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      @media (min-width: 1800px){
+        margin-right: 150px;
+      }
+      @media (max-width: 576px){
+        margin-right: 15px;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      img{
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      p{
+        font-size: 15px;
+        color: $blackcolor;
+        font-weight: 600;
+        span{
+          display: block;
+          font-size: 13px;
+          color: #666666;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+.sellersDescription{
+  position: relative;
+  padding: 70px 0 60px 0;
+  p{
+    font-size: 15px;
+    color: $lightgrey;
+    font-weight: 600;
+    margin-bottom: 20px;
+    a.showBtn{
+      display: inline-block;
+      color: $lightgrey;
+      border: 1px solid $lightgrey;
+      border-radius: 50px;
+      padding: 5px 12px;
+      text-decoration: none;
+      margin-left: 10px;
+      @media (max-width: 576px){
+        margin-top: 8px;
+      }
+      &:hover{
+        color: $defaultcolor;
+        border-color: $orengecolor;
+        background-color: $orengecolor;
+      }
+    }
+  }
+  h3{
+    font-size: 18px;
+    color: $blackcolor;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  ul{
+    li{
+      position: relative;
+      font-size: 15px;
+      color: $lightgrey;
+      font-weight: 600;
+      margin-top: 20px;
+      padding-left: 22px;
+      &::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 2px;
+        background-color: $blackcolor;
+        top: 9px;
+        left: 0;
+      }
+    }
+  }
+}
+
+
+.propertyFeaturesPrt{
+  position: relative;
+  padding: 70px 0 40px 0;
+  .propertyFeaturesTable{
+    width: 80%;
+    @media (min-width: 1800px){
+      width: 60%;
+    }
+    @media (max-width: 767px){
+      width: 100%;
+    }
+    table{
+      width: 100%;
+      td{
+        padding: 6px 0;
+        font-size: 15px;
+        color: $lightgrey;
+        font-weight: 600;
+        vertical-align: top;
+        &:first-child{
+          width: 50%;
+        }
+        &:last-child{
+          width: 50%;
+          padding-left: 10px;
+          text-align: right;
+        }
+      }
+    }
+  }
+  a.lostPropertyFeatureLink{
+    font-size: 15px;
+    color: $orengecolor;
+    line-height: 20px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 12px;
+    img{
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+
+.roomDimensionPrt{
+  position: relative;
+  padding: 70px 0 40px 0;
+  .roomDimensionTable{
+    position: relative;
+    width: 100%;
+    .table{
+      position: relative;
+      width: 100%;
+      .theader,
+      .tableRow{
+        display: table-row;
+        @media (max-width: 767px){
+          display: block;
+          &:nth-child(odd){
+            background-color: #f3f3f3;
+          }
+        }
+      }
+      .tableHeader,
+      .tableSmall{
+        display: table-cell;
+        @media (max-width: 767px){
+          display: flex;
+          flex-wrap: wrap;
+          border: 1px solid #adadad;
+          border-top: none;
+        }
+        &:first-child{
+          width: 20%;
+          @media (max-width: 767px){
+            width: 100%;
+            border-top: 1px solid #adadad;
+          }
+        }
+        &:nth-child(2){
+          width: 20%;
+          @media (max-width: 767px){
+            width: 100%;
+          }
+        }
+        &:nth-child(3){
+          width: 40%;
+          @media (max-width: 767px){
+            width: 100%;
+          }
+        }
+        &:last-child{
+          width: 20%;
+          @media (max-width: 767px){
+            width: 100%;
+          }
+        }
+      }
+      .tableSmall{
+        .tableCell{
+          &:nth-child(odd){
+            display: none;
+            @media (max-width: 767px){
+              display: block;
+            }
+          }
+        }
+      }
+      .tableSmall{
+        .tableCell:first-child{
+          @media (max-width: 767px){
+            font-size: 17px;
+            color: $lightgrey;
+            font-weight: bold;
+            width: 30%;
+          }
+          @media (max-width: 576px){
+            width: 45%;
+          }
+        }
+        .tableCell:last-child{
+          @media (max-width: 767px){
+            width: 70%;
+          }
+          @media (max-width: 576px){
+            width: 55%;
+          }
+        }
+      }
+      .tableBody{
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        padding: 12px 0;
+        border-radius: 8px;
+        &:nth-child(odd){
+          background-color: $defaultcolor;
+        }
+        &:nth-child(even){
+          background-color: #fafafa;
+          @media (max-width: 767px){
+            background-color: $defaultcolor;
+          }
+        }
+        @media (max-width: 767px){
+          padding: 15px 0;
+          &:first-child{
+            padding: 0;
+          }
+        }
+        .tableRow:not(:first-child){
+          .tableSmall:first-child{
+            @media (max-width: 767px){
+              display: none;
+            }
+            .tableCell:last-child{
+              display: none;
+            }
+          }
+        }
+        .tableRow:first-child{
+          .tableSmall:first-child{
+            @media (max-width: 767px){
+              background-color: #ffffff;
+            }
+            .tableCell{
+              font-size: 17px;
+              color: $lightgrey;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .tableHeader{
+        font-size: 15px;
+        color: $lightgrey;
+        font-weight: bold;
+        padding: 3px 15px 10px 15px;
+      }
+      .tableCell{
+        font-size: 15px;
+        color: $lightgrey;
+        font-weight: 600;
+        padding: 6px 15px;
+        @media (max-width: 767px){
+          padding: 10px 15px;
+        }
+      }
+      .theader{
+        @media (max-width: 767px){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+//********* Buy Tab Style
+.buyTabBodyPrt{
+  position: relative;
+  padding: 0 13px;
+  @media (min-width: 1800px){
+    padding-right: 75px;
+  }
+  @media (max-width: 767px){
+    padding: 0;
+  }
+  p{
+    font-size: 15px;
+    color: $lightgrey;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  
+  .buyTabContentList{
+    ul{
+      li{
+        position: relative;
+        margin-top: 50px;
+        display: flex;
+        align-items: flex-start;
+        @media (max-width: 767px){
+          margin-top: 30px;
+        }
+        .buyStepNumber{
+          display: inline-block;
+          background-color: #f9f2f0;
+          padding: 15px 20px;
+          border-radius: 25px;
+          text-align: center;
+          margin-right: 30px;
+          @media (max-width: 767px){
+            margin-right: 15px;
+            padding: 15px;
+            border-radius: 15px;
+          }
+          span{
+            position: relative;
+            display: block;
+            width: 100%;
+            background-color: #f9f2f0;
+            font-size: 13px;
+            color: #875546;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding-top: 8px;
+            top: -13px;
+            @media (max-width: 767px){
+              top: -10px;
+            }
+          }
+          strong{
+            font-size: 80px;
+            color: #f9f2f0;
+            font-weight: bold;
+            line-height: 1;
+            text-shadow: 0 0 2px #481100;
+            @media (max-width: 767px){
+              font-size: 60px;
+            }
+          }
+        }
+
+        .buyStepContent{
+          h3{
+            font-size: 18px;
+            color: $lightgrey;
+            font-weight: bold;
+            margin: 6px 0 15px 0;
+            @media (max-width: 767px){
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .downloadBtn{
+          margin-top: 35px;
+          .orengeGlowBtn{
+            @media (max-width: 400px){
+              padding: 15px 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .allBuyingLink{
+    font-size: 18px;
+    color: $lightgrey;
+    font-weight: bold;
+    margin-top: 45px;
+    a{
+      margin-left: 8px;
+    }
+  }
+}
+
+
+
+//********* Cost Tab Style
+.costTabBodyPrt{
+  position: relative;
+  padding: 0 13px;
+  .annualMonthlyCost{
+    position: relative;
+    padding: 70px 0 60px 0;
+    .table{
+      position: relative;
+      width: 100%;
+      display: table;
+      .thdrRow{
+        display: table-row;
+        @media (max-width: 576px){
+          display: none;
+        }
+        .thdrCell{
+          display: table-cell;
+          padding: 8px 10px;
+          font-size: 15px;
+          color: $lightgrey;
+          font-weight: bold;
+          &:first-child{
+            width: 50%;
+            padding-left: 0;
+          }
+          &:nth-child(2){
+            width: 25%;
+          }
+          &:last-child{
+            width: 25%;
+          }
+        }
+      }
+      .tbodyRow{
+        display: table-row;
+        @media (max-width: 576px){
+          display: block;
+          margin-top: 15px;
+          padding: 8px 15px;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+          border-radius: 8px;
+          &:nth-child(odd){
+            background-color: #f3f3f3;
+          }
+        }
+        &:last-child{
+          .tableCell{
+            font-weight: bold !important;
+          }
+        }
+        .tableSmall{
+          display: table-cell;
+          padding: 8px 10px;
+          @media (max-width: 576px){
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+          }
+          &:first-child{
+            width: 50%;
+            padding-left: 0;
+            @media (max-width: 576px){
+              width: 100%;
+            }
+          }
+          &:nth-child(2){
+            width: 25%;
+            @media (max-width: 576px){
+              width: 100%;
+            }
+          }
+          &:last-child{
+            width: 25%;
+            @media (max-width: 576px){
+              width: 100%;
+            }
+          }
+          .tableCell{
+            font-size: 15px;
+            color: $lightgrey;
+            font-weight: 500;
+            &:first-child{
+              display: none;
+              font-size: 15px;
+              color: $lightgrey;
+              font-weight: bold;
+              @media (max-width: 576px){
+                display: block;
+                width: 48%;
+              }
+            }
+            &:last-child{
+              @media (max-width: 576px){
+                width: 48%;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .annualMonthlyCostRow{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      flex-direction: column;
+      @media (min-width: 1800px){
+        flex-direction: row;
+      }
+      .annualMonthlyCostLeftTable{
+        width: 100%;
+        margin-bottom: 80px;
+        @media (min-width: 1800px){
+          width: 45%;
+        }
+      }
+      .annualMonthlyCostRightPrt{
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+        background: url(../../../../public/assets/images/annual-monthly-cost-right-bg.png) no-repeat 0 0;
+        background-size: cover;
+        padding: 30px 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-end;
+        box-shadow: 0 7px 15px #ebf5ff;
+        @media (min-width: 1800px){
+          width: 55%;
+        }
+        @media (max-width: 767px){
+          flex-direction: column;
+        }
+        .leftTextArea{
+          width: 50%;
+          @media (max-width: 767px){
+            width: 100%;
+            text-align: center;
+            order: 1;
+            margin-top: 35px;
+          }
+          h3{
+            font-size: 20px;
+            color: #1f6dab;
+            font-weight: bold;
+          }
+          .formArea{
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            @media (max-width: 576px){
+              flex-direction: column;
+            }
+            input{
+              width: 63%;
+              height: 50px;
+              background-color: $defaultcolor;
+              border: 1px solid #cccccc;
+              border-radius: 80px;
+              padding: 10px 45px 10px 15px;
+              outline: none;
+              @media (max-width: 576px){
+                width: 100%;
+              }
+            }
+            button.orengeBtnNoGlow{
+              width: 37%;
+              height: 50px;
+              padding: 10px;
+              position: relative;
+              left: -40px;
+              @media (max-width: 576px){
+                margin: 10px 0 0 0;
+                left: 0;
+                width: 50%;
+              }
+            }
+          }
+        }
+
+        .rightImgArea{
+          width: 50%;
+          padding-left: 10px;
+          text-align: center;
+          @media (max-width: 767px){
+            width: 100%;
+          }
+          .houseImg{
+            position: relative;
+            margin-top: -75px;
+            margin-left: 13px;
+            @media (max-width: 479px){
+              margin-left: 5px;
+            }
+          }
+          .orengeBorderBtn{
+            z-index: 3;
+            margin-top: -25px;
+            @media (max-width: 479px){
+              width: 100%;
+              font-size: 15px;
+              padding: 15px 10px;
+            }
+          }
+        }
+      }
+    }
+    a.orengeArrowLink{
+      margin-top: 25px;
+    }
+  }
+
+
+  .mortgageCalculatorPrt{
+    position: relative;
+    padding: 70px 0 60px 0;
+    .mortgageCalculatorRow{
+      @include flex-space-between;
+      .mortgageCalculatorClm{
+        width: 31%;
+        @media (max-width: 767px){
+          width: 100%;
+          margin-top: 35px;
+        }
+        .range{
+          padding: 0;
+          outline: none;
+          border: none;
+          width: 100%;
+          height: 12px;
+          border-radius: 50px;
+          background: #f2f2f2;
+          overflow: hidden;
+        //   @include no-appearance;
+        }
+        .range::-webkit-slider-thumb{
+          width: 20px;
+          height: 20px;
+          border: 1px solid #c7c7c7;
+          border-radius: 100%;
+          background: $defaultcolor;
+          cursor: pointer;
+          box-shadow: -400px 0 0 390px $orengecolor;
+        //   @include no-appearance;
+        }
+
+        select{
+          background-position: 94% 54%;
+        }
+
+        .tooltipArea{
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 3;
+        }
+      }
+    }
+
+    .ammountPaymentResult{
+      position: relative;
+      max-width: 500px;
+      text-align: center;
+      margin: 40px auto 0 auto;
+      .ammountPaymentRow{
+        @include flex-space-between;
+        @media (max-width: 576px){
+          flex-direction: column;
+        }
+        .myPayments{
+          @media (max-width: 576px){
+            margin-top: 25px;
+          }
+        }
+        h3{
+          font-size: 20px;
+          color: $lightgrey;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        h4{
+          font-size: 35px;
+          color: $orengecolor;
+          font-weight: bold;
+          @media (max-width: 576px){
+            font-size: 25px;
+          }
+        }
+      }
+      p{
+        font-size: 16px;
+        color: #666666;
+        font-weight: 500;
+        margin: 25px 0;
+        padding: 0 40px;
+      }
+    }
+  }
+
+
+  .needMortgageBrokerPrt{
+    position: relative;
+    padding: 70px 0 20px 0;
+    .needMortgageBrokerSlideArea{
+      text-align: center;
+      a.orengeGlowBtn{
+        margin-top: 30px;
+        @media (max-width: 520px){
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+
+
+//********* Social demographic data Tab Style
+.socialDataTabBodyPrt{
+  position: relative;
+  padding: 0 13px;
+  .mapArea{
+    h2{
+      font-size: 22px;
+      color: $lightgrey;
+      font-weight: bold;
+    }
+    p{
+      font-size: 15px;
+      color: $lightgrey;
+      font-weight: 500;
+      line-height: 24px;
+      margin: 20px 0;
+    }
+    iframe{
+      width: 100%;
+      height: 390px;
+      border: none;
+      border-radius: 10px;
+    }
+    .mapImg{
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  .statisticArea{
+    position: relative;
+    padding: 40px 0;
+    .hdnRightBorder{
+      margin-bottom: 0;
+    }
+    ul{
+      @include flex-start;
+      li{
+        width: 20%;
+        padding-right: 10px;
+        margin-top: 30px;
+        @media (max-width: 767px){
+          width: 25%;
+        }
+        @media (max-width: 576px){
+          width: 33%;
+        }
+        @media (max-width: 479px){
+          width: 50%;
+          &:nth-child(even){
+            padding-right: 0;
+            text-align: right;
+          }
+        }
+        p{
+          font-size: 15px;
+          color: $lightgrey;
+          font-weight: 500;
+        }
+        h4{
+          font-size: 16px;
+          color: $blackcolor;
+          font-weight: bold;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

@@ -72,7 +72,7 @@ export default function Signin({ isLoginModalOpen, loginCloseModal, registerOpen
                           registerOpenModal()
                           loginCloseModal()
                         }
-                        }>Register today</a></p>
+                        }> Register today</a></p>
                       </div>
                     </div>
                   </Form>
